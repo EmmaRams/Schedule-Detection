@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}My Schedule{% endblock %}
+
+{% block content %}
+<div class="event-grid">
+    {% if not events %}
+        <div class="empty-state">
+            <div class="empty-content">
+                <i class="fas fa-calendar-plus"></i>
+                <h2>No Events Scheduled</h2>
+                <p>Get started by adding your first event</p>
+                <a href="/add" class="btn btn-primary">
+                    <i class="fas fa-plus"></i>
+                    Add Event
+                </a>
+            </div>
+        </div>
+    {% else %}
+        {% for event in events %}
+        <div class="event-card {% if check_conflict(event['start'], event['end']) %}conflict{% endif %}">
+            <div class="event-header">
+                <h3 class="event-title">{{ event.title }}</h3>
+                <span class="event-category">
+                    <i class="fas fa-{{ 'briefcase' if event.category == 'work' else 'user' }}"></i>
+                    {{ event.category|capitalize }}
+                </span>
+            </div>
+            
+            <div class="event-time">
+                <i class="fas fa-clock"></i>
+                {{ datetime.fromisoformat(event.start).strftime("%a %b %d, %I:%M %p") }}
+                -
+                {{ datetime.fromisoformat(event.end).strftime("%I:%M %p") }}
+            </div>
+
+            {% if event.description %}
+            <div class="event-description">
+                <p>{{ event.description }}</p>
+            </div>
+            {% endif %}
+
+            <div class="event-actions">
+                <form action="/delete/{{ event.id }}" method="POST">
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fas fa-trash"></i>
+                        Delete
+                    </button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
