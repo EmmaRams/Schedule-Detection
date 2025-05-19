@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Add Event{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h1 class="form-title">
+        <i class="fas fa-calendar-plus"></i>
+        Schedule New Event
+    </h1>
+    
+    <form method="POST" class="event-form">
+        <div class="input-group">
+            <label class="input-label">Event Title</label>
+            <input type="text" name="title" class="input-field" required 
+                   placeholder="Team meeting, doctor appointment...">
+        </div>
+
+        <div class="input-row">
+            <div class="input-group">
+                <label class="input-label">Start Time</label>
+                <input type="datetime-local" name="start" class="input-field" required>
+            </div>
+            
+            <div class="input-group">
+                <label class="input-label">End Time</label>
+                <input type="datetime-local" name="end" class="input-field" required>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label class="input-label">Event Type</label>
+            <select name="category" class="input-field" required>
+                <option value="meeting">📅 Meeting</option>
+                <option value="appointment">🩺 Appointment</option>
+                <option value="personal">👤 Personal</option>
+                <option value="deadline">⏳ Deadline</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label class="input-label">Description (Optional)</label>
+            <textarea name="description" class="input-field" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            <i class="fas fa-save"></i>
+            Save Event
+        </button>
+    </form>
+</div>
+{% endblock %}
