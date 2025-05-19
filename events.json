@@ -1,0 +1,64 @@
+[
+  {
+    "id": "1747592387.325049",
+    "title": "Meeting",
+    "start": "2025-05-13T02:01",
+    "end": "2025-05-13T11:18",
+    "category": "personal"
+  },
+  {
+    "id": "1747592514.216187",
+    "title": "Class meeting",
+    "start": "2025-05-14T13:04",
+    "end": "2025-05-14T16:04",
+    "category": "meeting"
+  },
+  {
+    "id": "e978b6d7-244a-49de-b239-92e8407ef775",
+    "title": "Class meeting",
+    "start": "2025-05-14T09:30",
+    "end": "2025-05-14T12:30",
+    "category": "meeting",
+    "description": ""
+  },
+  {
+    "id": "08a27abf-2fb8-4a2c-b104-4c8d8d70b1ac",
+    "title": "Class meeting",
+    "start": "2025-05-19T00:30",
+    "end": "2025-05-19T15:30",
+    "category": "meeting",
+    "description": ""
+  },
+  {
+    "id": "c8e5429b-9cc4-4b78-bc7a-1022cab5a5c0",
+    "title": "Class meeting",
+    "start": "2025-05-13T15:30",
+    "end": "2025-05-13T18:30",
+    "category": "study",
+    "description": ""
+  },
+  {
+    "id": "6da6f0f3-af82-49a4-935b-503e6b942b8c",
+    "title": "Class meeting",
+    "start": "2025-05-20T17:30",
+    "end": "2025-05-20T18:30",
+    "category": "class",
+    "description": ""
+  },
+  {
+    "id": "1747595869.880727",
+    "title": "Class meeting",
+    "start": "2025-05-21T17:30",
+    "end": "2025-05-21T19:30",
+    "category": "meeting",
+    "description": ""
+  },
+  {
+    "id": "1747595969.412686",
+    "title": "Class meeting",
+    "start": "2025-05-18T17:30",
+    "end": "2025-05-18T18:30",
+    "category": "meeting",
+    "description": ""
+  }
+]
